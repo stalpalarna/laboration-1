@@ -11,10 +11,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        APILoader.WeatherAPI weatherAPI;
 
-        Retrofit retrofit = APILoader.getClient("https://api.met.no/weatherapi/nowcast/2.0/complete?lat=62.3955&lon=17.28611");
+        Retrofit retrofit;
 
-        System.out.println(retrofit.baseUrl());
+
+        System.out.println(weatherAPI.getNowcast(62.3955 , 17.28611));
+
 
 
     }
