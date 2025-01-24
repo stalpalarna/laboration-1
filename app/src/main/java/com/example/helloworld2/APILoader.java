@@ -7,13 +7,13 @@ public class APILoader {
 
     private static Retrofit retrofit = null;
 
-    private static final String BASE_URL = "https://api.met.no/weatherapi/nowcast/2.0/complete?lat=62.3955&lon=17.28611";
+    private static final String BASE_URL = "https://api.met.no/";
 
 
-    public static Retrofit getClient(String baseUrl) {
+    public static Retrofit getClient() {
         if (retrofit == null) {
             retrofit = new Retrofit.Builder()
-                    .baseUrl(baseUrl)
+                    .baseUrl(BASE_URL)
                     .addConverterFactory(GsonConverterFactory.create())
                     .build();
         }
@@ -21,5 +21,4 @@ public class APILoader {
         return retrofit;
 
     }
-
 }
