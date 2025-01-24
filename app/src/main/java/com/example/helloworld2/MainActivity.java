@@ -19,7 +19,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity {
-    //Test commit 2
+    //Test commit 3
     private AppBarConfiguration appBarConfiguration;
     private ActivityMainBinding binding;
 
